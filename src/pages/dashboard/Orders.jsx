@@ -55,8 +55,8 @@ const Orders = () => {
                 </td>
                 <td className="px-4 py-2 border border-gray-300">
                   ₹
-                  {Number(field.price.doubleValue) *
-                    Number(field.quantity.integerValue)}
+                  {parseFloat(field.price.doubleValue) *
+                    parseFloat(field.quantity.integerValue).toFixed(2)}
                 </td>
               </tr>
             );

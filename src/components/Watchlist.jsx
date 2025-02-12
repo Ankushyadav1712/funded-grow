@@ -11,16 +11,24 @@ import { stockData } from "../helper/data";
 
 // for storing data in firebase
 
-import { collection, addDoc, query, where, getDocs, doc, getDoc, setDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  query,
+  where,
+  getDocs,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+  arrayUnion,
+} from "firebase/firestore";
 import { db } from "../firebase";
 import { auth } from "../firebase";
 
 // const user = auth.currentUser;
 
-// const user=localStorage.getItem('user'); 
-
-
-
+// const user=localStorage.getItem('user');
 
 const Watchlist = () => {
   const [showBuyWindow, setShowBuyWindow] = useState(false);
@@ -165,7 +173,7 @@ const WatchListActions = ({ uid, handleBuyClick, handleSellClick }) => {
   return (
     <span className="actions gap-3 rounded">
       <Tooltip title="Buy (B)" placement="top" arrow TransitionComponent={Grow}>
-        <button className="buy" onClick={handleBuyClick}>
+        <button className="buy " onClick={handleBuyClick}>
           Buy
         </button>
       </Tooltip>
@@ -269,23 +277,23 @@ const BuyWindow = ({ stock, handleCancelClick }) => {
   };
 
   return (
-    <div className="con fixed top-36  left-1/2 right-1/2 transform -translate-x-1/4 -translate-y-1/2 w-1/3 p-6 bg-gray-300 shadow-xl rounded">
+    <div className="con fixed  top-32  left-1/2 right-1/2 transform -translate-x-1/4 -translate-y-1/2 w-1/3 p-6 bg-gray-300 shadow-transparent rounded">
       <div className="regular-order w-full">
-        <h2 className="text-xl font-bold mb-4">Buy {stock.name}</h2>
+        <h2 className="text-xl font-bold mb-4 text-black">Buy {stock.name}</h2>
         <div className="inputs grid grid-cols-2 gap-4 ">
           <fieldset className="border p-2 rounded w-1/2">
-            <legend className="text-sm">Qty.</legend>
+            <legend className="text-sm text-gray-700">Qty.</legend>
             <input
               type="number"
               name="qty"
               id="qty"
               onChange={(e) => setStockQuantity(e.target.value)}
               value={stockQuantity}
-              className="w-full p-1 border rounded"
+              className="w-full p-1 border-black rounded"
             />
           </fieldset>
           <fieldset className="border p-2 rounded w-1/2">
-            <legend className="text-sm">Price</legend>
+            <legend className="text-sm text-gray-700">Price</legend>
             <input
               type="number"
               name="price"
@@ -293,7 +301,7 @@ const BuyWindow = ({ stock, handleCancelClick }) => {
               step="0.05"
               onChange={(e) => setStockPrice(e.target.value)}
               value={stockPrice}
-              className="w-full p-1 border rounded"
+              className="w-full p-1 border-black rounded"
             />
           </fieldset>
         </div>
@@ -305,14 +313,14 @@ const BuyWindow = ({ stock, handleCancelClick }) => {
         </span>
         <div className="flex justify-end gap-4 mt-4">
           <button
-            className="btn btn-orange bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 border-black"
+            className="btn btn-orange bg-blue-500 text-black px-4 py-2 rounded hover:bg-blue-700 border-black"
             onClick={handleBuyClick}
             id="addbuydata"
           >
             Buy
           </button>
           <button
-            className="btn btn-grey bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+            className="btn btn-grey bg-gray-300 px-4 py-2 rounded hover:bg-gray-400 border-black"
             onClick={handleCancelClick}
           >
             Cancel
@@ -391,6 +399,7 @@ const SellWindow = ({ stock, handleCancelClick }) => {
     handleCancelClick(); // Close window after after
   };
 
+  // window of buying and selling stocks
   return (
     <div className="con fixed top-36  left-1/2 transform -translate-x-1/4 -translate-y-1/2 w-1/3 p-6 bg-gray-300 shadow-xl rounded">
       <div className="regular-order w-full">
@@ -434,7 +443,7 @@ const SellWindow = ({ stock, handleCancelClick }) => {
             Sell
           </button>
           <button
-            className="btn btn-grey bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+            className="btn btn-grey bg-gray-300 px-4 py-2 rounded hover:bg-gray-400 border-black"
             onClick={handleCancelClick}
           >
             Cancel

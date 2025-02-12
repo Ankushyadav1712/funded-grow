@@ -50,7 +50,10 @@ const Hero = () => {
             Worried About Taxes & Brokerage?
           </h1>
           <h3 className="text-center pt-2">Calculate Your Brokerage</h3>
-          <Link className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded btn-animated shadow-animation text-center mt-5 self-center no-underline" to='/calculate'>
+          <Link
+            className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded btn-animated shadow-animation text-center mt-5 self-center no-underline"
+            to="/calculate"
+          >
             Click Here
           </Link>
         </div>
@@ -62,7 +65,7 @@ const Hero = () => {
         <h2 className="pricing-title text-5xl">
           TRANSPARENT PRICING. NO HIDDEN CHARGES
         </h2>
-        <div className="pricing-cards">
+        <div className="pricing-cards mb-10">
           <div className="pricing-card  bgWhite">
             <h3 className="h3bg">₹0</h3>
             <p className="h3bg">Brokerage On Equity Delivery</p>
@@ -88,7 +91,8 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <a href="/pricing" className="view-pricing">
+        <a href="/pricing" className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2
+        px-4 rounded btn-animated shadow-animation no-underline p-3">
           View Pricing
         </a>
       </div>
