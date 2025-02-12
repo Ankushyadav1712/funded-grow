@@ -246,7 +246,7 @@ const Menu = () => {
           </div>
 
           {/* Profile */}
-          <div className="col-2"></div>
+          <div className="col-4"></div>
           <div className="lg:flex items-center space-x-4 mt-2">
             <div className="profile flex items-center mt-4">
               <div className="avatar bg-white text-black px-3 py-2 rounded-full mr-2 mt-3 border text-5xl">
