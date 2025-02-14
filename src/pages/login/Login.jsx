@@ -63,7 +63,7 @@ const Login = () => {
           <div className="formWapper">
             <span className="logo">Funded Grow</span>
             <span className="title">Login</span>
-            <form>
+            <form onSubmit={handleLinkClick}>
               <input
                 type="email"
                 placeholder="Email"
@@ -82,15 +82,15 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <Link
+              <button
                 className={`SignIn no-underline text-center ${
                   isFormValid() ? "" : "disabled"
                 }`}
                 type="submit"
-                onClick={handleLinkClick}
+                // onClick={handleLinkClick}
               >
                 Login
-              </Link>
+              </button>
             </form>
             <p>
               You don't have an account?{" "}

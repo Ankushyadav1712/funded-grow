@@ -123,7 +123,6 @@ useEffect(() => {
               >
                 SignUp
               </button>
-
             </form>
             <p>
               You do have an account?{" "}
