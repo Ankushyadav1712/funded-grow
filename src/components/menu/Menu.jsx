@@ -177,13 +177,13 @@ const Menu = () => {
       <nav className="col-8 flex">
         <div className="container mx-auto flex justify-around items-center col-12 mt-3 ">
           {/* Logo */}
-          <div className="text-black text-2xl font-bold">
+          <div className="text-black text-2xl font-bold col-4">
             Funded{" "}
             <span className="border-2 border-green-500 text-green-500 px-2 py-1 rounded">
               Grow
             </span>
           </div>
-          <div className="col-6"></div>
+          <div className="col-2"></div>
 
           {/* Hamburger Icon */}
           <div className="lg:hidden flex items-center ">
