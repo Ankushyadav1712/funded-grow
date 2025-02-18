@@ -253,7 +253,7 @@ const Menu = () => {
                 F<span className="text-green-500">G</span>
               </div>
               <p
-                className="username mt-1 text-9xl border border-black m-2 p-2 rounded bg-green-400 hover:bg-gray-500"
+                className="username mt-1 text-9xl border border-black m-2 p-2 rounded bg-green-400 hover:bg-green-400"
                 onClick={handleProfileClick}
               >
                 Profile{" "}
