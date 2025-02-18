@@ -52,7 +52,7 @@ function BrokerageCalculator() {
     <div className="container1 mt-5">
       <h2>Intraday Brokerage Calculator</h2>
       <div>
-        <label>Buy Price (₹):</label>
+        <label>Buy Price (₹) :</label>
         <input
           type="number"
           value={buyPrice}

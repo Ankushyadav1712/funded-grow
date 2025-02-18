@@ -83,7 +83,7 @@ const Login = () => {
                 required
               />
               <button
-                className={`SignIn no-underline text-center ${
+                className={`SignIn no-underline text-center cursor-pointer ${
                   isFormValid() ? "" : "disabled"
                 }`}
                 type="submit"

@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// const [fund ,setFund]  = useState('');
 
 const Funds = () => {
   return (
     <>
       <div className="funds">
         <p className="mb-5">Instant, zero-cost fund transfers with UPI </p>
-        {/* <Link className="btn btn-green border mt-5">Add funds</Link>
+        {/* <Link className="btn btn-green border mt-5 ">Add funds</Link>
         <Link className="btn btn-blue border mt-5">Withdraw</Link> */}
       </div>
 
@@ -73,13 +74,13 @@ const Funds = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="col">
+        {/* <div className="col-4">
           <div className="commodity">
             <p>You don't have a commodity account</p>
             <Link className="btn btn-blue">Open Account</Link>
           </div>
         </div> */}
+
       </div>
     </>
   );
