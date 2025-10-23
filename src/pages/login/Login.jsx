@@ -13,10 +13,9 @@ const Login = () => {
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
-      navigate("/dashboard"); // Redirect to dashboard if already logged in
+      navigate("/Login"); // Automatically redirect if user is already logged in
     }
   }, [navigate]);
-
 
   // Basic validation checks
 
